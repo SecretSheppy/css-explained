@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+}
+
+/*
+grid layout scripts
+*/
+
+.layout {
+    /* set display to grid */
+    display: grid;
+
+    /* define the areas of the grid */
+    grid-template-areas: 
+    "nav nav nav"
+    "content1 content2 content3"
+    "footer footer footer";
+
+    /* set height of each row in the grid */
+    grid-template-rows: 100px calc(100vh - 200px) 100px;
+
+    /* same as above can be done for columns (grid-template-columns)
+    but is not needed for example */
+
+    
+    & .navbar {
+        /* setting the grid area of the div with this class
+        NOTE: while in the layout class the area was defined
+        as a string, here it is not referenced as a string */
+        grid-area: nav;
+    }
+
+    & .content:nth-child(1) {
+        grid-area: content1;
+    }
+
+    & .content:nth-child(2) {
+        grid-area: content2;
+    }
+
+    & .content:nth-child(3) {
+        grid-area: content3;
+    }
+
+    & .footer {
+        grid-area: footer;
+    }
+}
+
+/*
+color styling for each grid section. not important for
+learning the content
+*/
+
+.navbar {
+    background: red;
+}
+
+.content:nth-child(1) {
+    background: blue;
+}
+
+.content:nth-child(2) {
+    background: blueviolet;
+}
+
+.content:nth-child(3) {
+    background: green;
+}
+
+.footer {
+    background: yellow;
+}
