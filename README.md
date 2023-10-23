@@ -93,4 +93,6 @@ is all achieved with one grid.
 
 Add some color and format it correctly, you'll get the following result.
 
-![result](grid-template-areas/result.png)
+<div align="center">
+    <img src="grid-template-areas/result.png" alt="grid-template-area-result" style="width: 450px;">
+</div>
